@@ -1,14 +1,15 @@
 import React from "react";
 import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-4">
       <CartWidget /> {/* Agrego el logo de mi E-commerse */}
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link to="/" className="navbar-brand">
           Mi E-commerce
-        </a>
+        </Link>
         <button
           className="navbar-toggler collapsed"
           type="button"
@@ -23,19 +24,34 @@ const NavBar = () => {
         <div className="navbar-collapse collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link to="/" className="nav-link active" aria-current="page">
                 Inicio
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link to="/" className="nav-link">
                 Productos
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link to="/" className="nav-link">
                 Contacto
-              </a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/category/electronica" className="nav-link">
+                Electrónica
+              </Link>
+            </li>
+            <li>
+              <Link to="/category/ropa" className="nav-link">
+                Ropa
+              </Link>
+            </li>
+            <li>
+              <Link to="/category/libros" className="nav-link">
+                Libros
+              </Link>
             </li>
           </ul>
         </div>
